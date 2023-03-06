@@ -132,7 +132,7 @@ You can deploy this project using GitHub pages by pushing changes to the main br
 
 - GitHub: [@jorgeabrahan](https://github.com/jorgeabrahan)
 - LinkedIn: [Jorge Abrahan](https://www.linkedin.com/in/jorge-siguenza/)
-- 
+
 👤 **Nelson Araujo**
 
 - GitHub: [@NelsonAraujo93](https://github.com/NelsonAraujo93)
