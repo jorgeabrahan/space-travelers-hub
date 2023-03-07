@@ -1,21 +1,43 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { Provider } from 'react-redux';
+import store from './redux/store';
 import Missions from './components/Missions';
 import Rockets from './components/Rockets';
 import Navbar from './components/Navbar';
 import Profile from './components/Profile';
 import ErrorPage from './components/ErrorPage';
 
+const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <Navbar />,
+    errorElement: <ErrorPage />,
+    children: [
+      {
+        index: true,
+        element: <Rockets />,
+      },
+      {
+        path: 'rockets',
+        element: <Rockets />,
+      },
+      {
+        path: 'missions',
+        element: <Missions />,
+      },
+      {
+        path: 'profile',
+        element: <Profile />,
+      },
+    ],
+  },
+]);
+
 function App() {
   return (
-    <BrowserRouter className="app-container">
-      <Navbar />
-      <Routes>
-        <Route exact path="/" element={<Missions />} />
-        <Route path="rockets" element={<Rockets />} />
-        <Route path="profile" element={<Profile />} />
-        <Route path="*" element={<ErrorPage />} />
-      </Routes>
-    </BrowserRouter>
+    <Provider store={store}>
+      <RouterProvider router={router} />
+    </Provider>
   );
 }
 

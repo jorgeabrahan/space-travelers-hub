@@ -1,6 +1,6 @@
 function Rockets() {
   return (
-    <section>
+    <section className="center">
       <h1>This is Rockets Component</h1>
     </section>
   );
