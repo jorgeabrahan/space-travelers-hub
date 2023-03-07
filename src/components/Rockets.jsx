@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchRockets } from '../redux/rockets/rocketsSlice';
 import Rocket from './Rocket';
+import '../css/Rockets.css';
 
 function Rockets() {
   const dispatch = useDispatch();
@@ -26,7 +27,7 @@ function Rockets() {
   ));
 
   return (
-    <section className="center">
+    <section className="center rockets">
       {rocketsList}
     </section>
   );

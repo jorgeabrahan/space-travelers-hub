@@ -8,15 +8,18 @@ function capitalizeFirst(word) {
 const Rocket = ({
   name, type, image, description,
 }) => (
-  <div>
-    <img src={image} alt={name} />
-    <p>
-      {description}
-    </p>
-    <button type="button">
-      Reserve
-      {capitalizeFirst(type)}
-    </button>
+  <div className="rocket">
+    <img className="rocket__image" src={image} alt={name} />
+    <div className="rocket__content">
+      <h2 className="rocket__title">{ name }</h2>
+      <p className="rocket__description">
+        {description}
+      </p>
+      <button className="rocket__button" type="button">
+        Reserve
+        {capitalizeFirst(type)}
+      </button>
+    </div>
   </div>
 );
 
