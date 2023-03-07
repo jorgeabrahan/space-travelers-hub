@@ -28,7 +28,7 @@ function Rockets() {
 
   return (
     <section className="center rockets">
-      {rocketsList}
+      {status === 'succeeded' ? rocketsList : <p>Loading...</p>}
     </section>
   );
 }
