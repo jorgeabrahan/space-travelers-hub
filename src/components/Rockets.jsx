@@ -15,14 +15,15 @@ function Rockets() {
   }, [dispatch]);
 
   const rocketsList = rockets.map(({
-    id, name, type, images, description,
+    id, name, images, description, reserved,
   }) => (
     <Rocket
       key={id}
+      id={id}
       name={name}
-      type={type}
       image={images[0]}
       description={description}
+      reserved={reserved}
     />
   ));
 
