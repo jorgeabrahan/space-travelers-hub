@@ -6,7 +6,7 @@ function Navbar() {
   return (
     <>
       <header>
-        <nav className={styles.nav}>
+        <nav className={`${styles.nav} center`}>
           <div className={styles.column}>
             <img className={styles.logo} src={planet} alt="Logo" />
             <h1 className={styles.h1}>Space Travelers&apos; Hub</h1>
@@ -26,7 +26,7 @@ function Navbar() {
               </li>
               <li className={styles.li}>
                 <NavLink
-                  to="/"
+                  to="missions"
                   className={({ isActive }) => {
                     const active = isActive ? styles.active : styles.navLink;
                     return active;
