@@ -49,3 +49,9 @@ h6 {
 button {
   cursor: pointer;
 }
+
+.center {
+  max-width: 1400px;
+  margin-inline: auto;
+  padding: 1rem;
+}
