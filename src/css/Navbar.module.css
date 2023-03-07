@@ -23,11 +23,7 @@ li a {
 }
 
 .navLink {
-  opacity: 0.5;
-  font-size: 0.813rem;
-  color: #0290ff;
-  letter-spacing: 1.9px;
-  text-transform: uppercase;
+  color: #067eff;
 }
 
 .navLink:hover {
@@ -36,11 +32,7 @@ li a {
 }
 
 .active {
-  font-size: 0.813rem;
-  text-transform: uppercase;
-  color: #0290ff;
-  letter-spacing: 1.9px;
-  opacity: 1;
+  color: #0559b5;
   text-decoration: underline;
 }
 
