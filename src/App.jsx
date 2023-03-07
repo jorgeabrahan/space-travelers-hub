@@ -15,15 +15,15 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <Missions />,
-      },
-      {
-        path: 'missions',
-        element: <Missions />,
+        element: <Rockets />,
       },
       {
         path: 'rockets',
         element: <Rockets />,
+      },
+      {
+        path: 'missions',
+        element: <Missions />,
       },
       {
         path: 'profile',
