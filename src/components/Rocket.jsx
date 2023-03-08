@@ -1,7 +1,7 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
-import { reserveRocket } from '../redux/rockets/rocketsSlice';
+import { cancelRocket, reserveRocket } from '../redux/rockets/rocketsSlice';
 
 const Rocket = ({
   id, name, image, description, reserved,
@@ -10,10 +10,13 @@ const Rocket = ({
   const handleReserve = () => {
     dispatch(reserveRocket(id));
   };
+  const handleCancelation = () => {
+    dispatch(cancelRocket(id));
+  };
 
   return (
     <div className="rocket">
-      <img className="rocket__image" src={image} alt={name} />
+      <img className="rocket__image" src={image} alt={name} loading="lazy" />
       <div className="rocket__content">
         <h2 className="rocket__title">{ name }</h2>
         <p className="rocket__description">
@@ -26,6 +29,15 @@ const Rocket = ({
           onClick={handleReserve}
         >
           Reserve Rocket
+        </button>
+        )}
+        {reserved && (
+        <button
+          className="rocket__button reserved"
+          type="button"
+          onClick={handleCancelation}
+        >
+          Cancel Reservation
         </button>
         )}
       </div>
