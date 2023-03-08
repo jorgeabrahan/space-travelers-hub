@@ -32,7 +32,7 @@ function Missions() {
         </thead>
         <tbody>
           {
-            missions.missions.map((item, i) => (
+            missions.map((item, i) => (
               <Mission
                 key={item.mission_id}
                 missionName={item.mission_name}
