@@ -1,0 +1,79 @@
+.table {
+  border: 1px solid;
+  border-collapse: collapse;
+}
+
+.tableHeader {
+  text-align: left;
+  font-weight: bold;
+  border: 1px solid;
+  padding-left: 6px;
+}
+
+.tableMissionName {
+  text-align: left;
+  font-weight: bold;
+  vertical-align: top;
+  border: 1px solid;
+  padding: 6px;
+}
+
+.tableStatus {
+  border: 1px solid;
+  padding: 6px;
+  width: 144px;
+}
+
+.tableJoin {
+  border: 1px solid;
+  padding: 6px;
+  width: 144px;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.tableMissionDescription {
+  text-align: left;
+  border: 1px solid;
+  padding: 6px;
+}
+
+.tableOdd {
+  background-color: #f2f2f2;
+}
+
+.member {
+  background-color: #18a2b9;
+  color: white;
+  text-transform: capitalize;
+  border-radius: 6px;
+  text-align: center;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.notAMember {
+  text-transform: uppercase;
+  background-color: #6d757e;
+  color: white;
+  border-radius: 6px;
+  text-align: center;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.onMission {
+  border-color: #df4654;
+  color: #df4654;
+  background: transparent;
+  border-radius: 6px;
+  padding: 6px;
+}
+
+.outMission {
+  border-color: #7b7e82;
+  color: #7b7e82;
+  background: transparent;
+  border-radius: 6px;
+  padding: 6px;
+}
