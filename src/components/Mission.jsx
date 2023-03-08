@@ -13,40 +13,45 @@ function Mission(
   },
 ) {
   const dispatch = useDispatch();
+
   return (
     <tr className={odd ? styles.tableOdd : styles.tableEven}>
       <td className={styles.tableMissionName}>{missionName}</td>
       <td className={styles.tableMissionDescription}>{description}</td>
-      <td className={styles.tableStatus}>
-        {
-          odd ? (
-            <div className={styles.notAMember}>not a member</div>
-          ) : (
-            <div className={styles.member}>active member</div>
-          )
-        }
-      </td>
-      <td className={styles.tableJoin}>
-        {
-          reserved ? (
-            <button
-              className={styles.onMission}
-              type="button"
-              onClick={() => { dispatch(leaveMission(missionId)); }}
-            >
-              Leave Mission
-            </button>
-          ) : (
-            <button
-              className={styles.outMission}
-              type="button"
-              onClick={() => { dispatch(bookMission(missionId)); }}
-            >
-              Join Mission
-            </button>
-          )
-        }
-      </td>
+      {
+        reserved ? (
+          <>
+            <td className={styles.tableStatus}>
+              <div className={styles.member}>active member</div>
+            </td>
+            <td className={styles.tableJoin}>
+              <button
+                className={styles.onMission}
+                type="button"
+                onClick={() => { dispatch(leaveMission(missionId)); }}
+              >
+                Leave Mission
+              </button>
+
+            </td>
+          </>
+        ) : (
+          <>
+            <td className={styles.tableStatus}>
+              <div className={styles.notAMember}>not a member</div>
+            </td>
+            <td className={styles.tableJoin}>
+              <button
+                className={styles.outMission}
+                type="button"
+                onClick={() => { dispatch(bookMission(missionId)); }}
+              >
+                Join Mission
+              </button>
+            </td>
+          </>
+        )
+      }
     </tr>
   );
 }
