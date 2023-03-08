@@ -10,12 +10,12 @@
   margin-bottom: 30px;
 }
 
-h2 {
+.errorTitle {
   font-size: 28px;
   padding: 0 60px;
 }
 
-p {
+.errorMessage {
   padding: 0 60px;
   text-align: justify;
 }

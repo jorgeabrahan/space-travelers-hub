@@ -7,7 +7,7 @@ import styles from '../css/Missions.module.css';
 function Missions() {
   const dispatch = useDispatch();
   const { missions, status } = useSelector((store) => store.missions);
-
+  
   useEffect(() => {
     if (missions.length > 0) return;
     if (status === 'failed') return;
