@@ -1,0 +1,53 @@
+.rockets {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.rocket {
+  display: flex;
+  gap: 1rem;
+}
+
+.rocket__image {
+  width: 260px;
+}
+
+.rocket__title {
+  font-size: 1.4rem;
+  margin-bottom: 0.3rem;
+}
+
+.rocket__badge {
+  background-color: #18a2b8;
+  color: white;
+  font-size: 0.85rem;
+  font-weight: bold;
+  padding: 0.1rem 0.3rem;
+  border-radius: 5px;
+  margin-right: 0.6rem;
+}
+
+.rocket__description {
+  font-size: 1.05rem;
+  line-height: 1.5rem;
+  font-weight: 400;
+  margin-bottom: 0.8rem;
+}
+
+.rocket__button {
+  border: none;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  padding: 0.5rem 1rem;
+}
+
+.rocket__button.reserve {
+  background-color: #007bff;
+  color: white;
+}
+
+.rocket__button.reserved {
+  background: none;
+  border: 1px solid #606972;
+  color: #606972;
+}

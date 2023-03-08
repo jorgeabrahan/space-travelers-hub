@@ -6,13 +6,15 @@ import styles from '../css/Missions.module.css';
 
 function Missions() {
   const dispatch = useDispatch();
-  const missions = useSelector((store) => store.missions);
+  const { missions, status } = useSelector((store) => store.missions);
 
   useEffect(() => {
+    if (missions.length > 0) return;
+    if (status === 'failed') return;
     dispatch(missionsFetchAPI());
-  }, []);
+  }, [dispatch]);
 
-  if (missions.status !== 'succeeded') {
+  if (status !== 'succeeded') {
     return (
       <section className="center">loading...</section>
     );
