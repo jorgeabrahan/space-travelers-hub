@@ -12,11 +12,9 @@ export const missionsFetchAPI = createAsyncThunk('missions/fetch', () => (
             mission_name: mission.mission_name,
             description: mission.description,
           };
-
-          console.log(nMission);
           return nArray.push(nMission);
         });
-        resolve(data);
+        resolve(nArray);
       })
       .catch((error) => {
         reject(error);
