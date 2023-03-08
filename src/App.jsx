@@ -18,10 +18,6 @@ const router = createBrowserRouter([
         element: <Rockets />,
       },
       {
-        path: 'rockets',
-        element: <Rockets />,
-      },
-      {
         path: 'missions',
         element: <Missions />,
       },
