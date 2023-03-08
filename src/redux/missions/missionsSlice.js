@@ -14,7 +14,7 @@ export const missionsFetchAPI = createAsyncThunk('missions/fetch', () => (
           };
           return nArray.push(nMission);
         });
-        resolve(data);
+        resolve(nArray);
       })
       .catch((error) => {
         reject(error);
