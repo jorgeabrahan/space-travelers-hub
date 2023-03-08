@@ -36,6 +36,8 @@ function Missions() {
                 missionName={item.mission_name}
                 description={item.description}
                 odd={i % 2 === 0}
+                reserved={item.reserved}
+                missionId={item.mission_id}
               />
             ))
           }
