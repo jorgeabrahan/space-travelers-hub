@@ -11,6 +11,7 @@ export const missionsFetchAPI = createAsyncThunk('missions/fetch', () => (
             mission_id: mission.mission_id,
             mission_name: mission.mission_name,
             description: mission.description,
+            reserved: false,
           };
           return nArray.push(nMission);
         });
@@ -31,7 +32,15 @@ const initialState = {
 const missionsSlice = createSlice({
   name: 'missions',
   initialState,
-  reducers: {},
+  reducers: {
+    bookMission: (state, { payload }) => {
+      const bookMissions = state.missions.map((mission) => {
+        if (mission.mission_id !== payload) return mission;
+        return { ...mission, reserved: true };
+      });
+      return { ...state, missions: bookMissions };
+    },
+  },
   extraReducers: (builder) => {
     builder
       .addCase(missionsFetchAPI.pending, (state) => ({ ...state, status: 'loading' }))
@@ -47,5 +56,7 @@ const missionsSlice = createSlice({
       }));
   },
 });
+
+export const { bookMission } = missionsSlice.actions;
 
 export default missionsSlice.reducer;
