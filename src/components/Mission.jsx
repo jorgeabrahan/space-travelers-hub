@@ -19,7 +19,7 @@ function Mission(
       <td className={styles.tableMissionName}>{missionName}</td>
       <td className={styles.tableMissionDescription}>{description}</td>
       {
-        reserved ? (
+        reserved && (
           <>
             <td className={styles.tableStatus}>
               <div className={styles.member}>active member</div>
@@ -35,7 +35,10 @@ function Mission(
 
             </td>
           </>
-        ) : (
+        )
+      }
+      {
+        !reserved && (
           <>
             <td className={styles.tableStatus}>
               <div className={styles.notAMember}>not a member</div>
