@@ -1,6 +1,8 @@
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchRockets } from '../redux/rockets/rocketsSlice';
+import Rocket from './Rocket';
+import '../css/Rockets.css';
 
 function Rockets() {
   const dispatch = useDispatch();
@@ -12,16 +14,21 @@ function Rockets() {
     dispatch(fetchRockets());
   }, [dispatch]);
 
+  const rocketsList = rockets.map(({
+    id, name, type, images, description,
+  }) => (
+    <Rocket
+      key={id}
+      name={name}
+      type={type}
+      image={images[0]}
+      description={description}
+    />
+  ));
+
   return (
-    <section className="center">
-      <div>
-        <img src="" alt="falcon 1" />
-        <p>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minus, perspiciatis explicabo.
-          Non saepe, eaque ea eos harum mollitia minima magnam.
-        </p>
-        <button type="button">Reserve Rocket</button>
-      </div>
+    <section className="center rockets">
+      {status === 'succeeded' ? rocketsList : <p>Loading...</p>}
     </section>
   );
 }

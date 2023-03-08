@@ -1,0 +1,34 @@
+.rockets {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.rocket {
+  display: flex;
+  gap: 1rem;
+}
+
+.rocket__image {
+  width: 260px;
+}
+
+.rocket__title {
+  font-size: 1.4rem;
+  margin-bottom: 0.3rem;
+}
+
+.rocket__description {
+  font-size: 1.05rem;
+  line-height: 1.5rem;
+  font-weight: 400;
+  margin-bottom: 0.8rem;
+}
+
+.rocket__button {
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: white;
+  font-size: 1.1rem;
+  padding: 0.5rem 1rem;
+}
