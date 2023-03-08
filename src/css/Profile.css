@@ -1,0 +1,28 @@
+.profile {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.reserved__title {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.reserved__list {
+  border: 2px solid #e2e2e2;
+  border-radius: 5px;
+}
+
+.reserved__item {
+  padding: 1rem 1.5rem;
+  font-size: 1.2rem;
+}
+
+.reserved__item:not(:last-child) {
+  border-bottom: 2px solid #e2e2e2;
+}
+
+.reserved__message {
+  font-size: 1.2rem;
+}
