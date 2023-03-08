@@ -17,6 +17,16 @@
   margin-bottom: 0.3rem;
 }
 
+.rocket__badge {
+  background-color: #18a2b8;
+  color: white;
+  font-size: 0.85rem;
+  font-weight: bold;
+  padding: 0.1rem 0.3rem;
+  border-radius: 5px;
+  margin-right: 0.6rem;
+}
+
 .rocket__description {
   font-size: 1.05rem;
   line-height: 1.5rem;

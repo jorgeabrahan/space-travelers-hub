@@ -20,6 +20,7 @@ const Rocket = ({
       <div className="rocket__content">
         <h2 className="rocket__title">{ name }</h2>
         <p className="rocket__description">
+          {reserved && <span className="rocket__badge">Reserved</span>}
           {description}
         </p>
         {!reserved && (
