@@ -13,7 +13,6 @@ function Mission(
   },
 ) {
   const dispatch = useDispatch();
-
   return (
     <tr className={odd ? styles.tableOdd : styles.tableEven}>
       <td className={styles.tableMissionName}>{missionName}</td>
