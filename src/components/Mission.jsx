@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 import styles from '../css/Missions.module.css';
-import { bookMission } from '../redux/missions/missionsSlice';
+import { bookMission, leaveMission } from '../redux/missions/missionsSlice';
 
 function Mission(
   {
@@ -29,7 +29,13 @@ function Mission(
       <td className={styles.tableJoin}>
         {
           reserved ? (
-            <button className={styles.onMission} type="button">Leave Mission</button>
+            <button
+              className={styles.onMission}
+              type="button"
+              onClick={() => { dispatch(leaveMission(missionId)); }}
+            >
+              Leave Mission
+            </button>
           ) : (
             <button
               className={styles.outMission}
