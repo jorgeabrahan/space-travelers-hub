@@ -65,8 +65,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-Not deployed yet.
-- [https://jorgeabrahan.github.io/](https://github.com/jorgeabrahan)
+- [https://space-travelers-ti6x.onrender.com/](https://space-travelers-ti6x.onrender.com/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -142,7 +141,7 @@ You can deploy this project using GitHub pages by pushing changes to the main br
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **Calculator**
+- [ ] **Display more data from the API**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -164,7 +163,12 @@ If you like this project you can just cheer me up with a comment 🙂!
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-No acknowledgments needed so far.
+Data fetched from the SpaceX API:
+
+- missions [https://api.spacexdata.com/v3/missions](https://api.spacexdata.com/v3/missions)
+- rockets [https://api.spacexdata.com/v3/rockets](https://api.spacexdata.com/v3/rockets)
+
+Special thanks to my Microverse peer and contributor [@NelsonAraujo93](https://github.com/NelsonAraujo93)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
