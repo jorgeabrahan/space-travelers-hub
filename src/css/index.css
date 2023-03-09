@@ -1,0 +1,57 @@
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  font-family: 'Lato', sans-serif;
+  background-color: #fafafa;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-padding-top: 90px;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+button {
+  cursor: pointer;
+}
+
+.center {
+  max-width: 1200px;
+  margin-inline: auto;
+  padding: 1rem;
+}
