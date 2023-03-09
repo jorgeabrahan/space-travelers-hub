@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tests for <Profile /> component Should match the snapshot 1`] = `
+<section
+  className="center profile"
+>
+  <div>
+    <h2
+      className="reserved__title"
+    >
+      My Missions
+    </h2>
+    <div
+      className="reserved__list"
+      data-testid="missions-container"
+    >
+      <p
+        className="reserved__item"
+      >
+        To reserve
+      </p>
+    </div>
+  </div>
+  <div>
+    <h2
+      className="reserved__title"
+    >
+      My Rockets
+    </h2>
+    <div
+      className="reserved__list"
+      data-testid="rockets-container"
+    >
+      <p
+        className="reserved__item"
+      >
+        To reserve
+      </p>
+    </div>
+  </div>
+</section>
+`;
