@@ -30,7 +30,14 @@ describe('Tests for <Rockets /> component', () => {
   const rocketsSlice = createSlice({
     name: 'rockets',
     initialState,
+    reducers: {
+      changeStatus: (state, { payload }) => ({
+        ...state, status: payload,
+      }),
+    },
   });
+
+  const { changeStatus } = rocketsSlice.actions;
 
   const store = configureStore({
     reducer: {
@@ -44,12 +51,19 @@ describe('Tests for <Rockets /> component', () => {
     </Provider>
   );
 
+  it('Should match the snapshot', () => {
+    expect(renderer.create(wrapper(<Rockets />)).toJSON()).toMatchSnapshot();
+  });
+
   it('Should render two rockets', () => {
     render(wrapper(<Rockets />));
     expect(screen.queryByTestId('rockets-container').children.length).toBe(2);
   });
 
-  it('Should match the snapshot', () => {
-    expect(renderer.create(wrapper(<Rockets />)).toJSON()).toMatchSnapshot();
+  it('Should show loading message', () => {
+    store.dispatch(changeStatus('idle'));
+    render(wrapper(<Rockets />));
+    expect(screen.queryByTestId('rockets-container').children.length).toBe(1);
+    expect(screen.getByText('Loading...')).not.toBeNull();
   });
 });
