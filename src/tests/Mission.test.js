@@ -9,10 +9,10 @@ describe('Tests for <Mission /> component', () => {
   const description = 'Mission description';
   const createMission = (reserved = false) => (
     <Mission
-      missionId={'2'}
+      missionId="2"
       missionName={title}
       description={description}
-      odd={true}
+      odd
       reserved={reserved}
     />
   );

@@ -27,7 +27,7 @@ describe('Tests for <Missions /> component', () => {
     name: 'missions',
     initialState,
   });
-  
+
   const store = configureStore({
     reducer: {
       missions: missionSlice.reducer,

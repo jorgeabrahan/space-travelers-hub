@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react';
-import { BrowserRouter, createBrowserRouter, createMemoryRouter, Route, RouterProvider, Routes } from 'react-router-dom';
+import { BrowserRouter, createBrowserRouter, RouterProvider } from 'react-router-dom';
 import { configureStore, createSlice } from '@reduxjs/toolkit';
 import renderer from 'react-test-renderer';
 import { Provider } from 'react-redux';
@@ -66,7 +66,7 @@ describe('Tests for <Navbar /> component', () => {
     },
   });
 
-  const routerProvider = (component) => {
+  const routerProvider = () => {
     const router = createBrowserRouter([
       {
         path: '/',
@@ -88,24 +88,28 @@ describe('Tests for <Navbar /> component', () => {
         ],
       },
     ]);
-    return <Provider store={store}>
-      <RouterProvider router={router} />
-    </Provider>
-  }
+    return (
+      <Provider store={store}>
+        <RouterProvider router={router} />
+      </Provider>
+    );
+  };
 
   it('Testing Rockets route', () => {
-    render(routerProvider(<Navbar/>));
-    //This is a text from Rockets component
+    render(routerProvider(<Navbar />));
+    // This is a text from Rockets component
     expect(screen.getByText('Rockets')).not.toBeNull();
   });
 
   it('Testing Missions route', () => {
     render(routerProvider(<Navbar />));
+    // This is a text from Missions component
     expect(() => screen.getByText('Missions')).not.toBeNull();
   });
 
   it('Testing Profile route', () => {
     render(routerProvider(<Navbar />));
+    // This is a text from Profile component
     expect(() => screen.getByText('Profile')).not.toBeNull();
   });
 
