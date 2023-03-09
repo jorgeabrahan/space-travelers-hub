@@ -30,7 +30,7 @@ function Missions() {
             <th className={styles.tableHeader}> </th>
           </tr>
         </thead>
-        <tbody>
+        <tbody data-testid="missions-container">
           {
             missions.map((item, i) => (
               <Mission
