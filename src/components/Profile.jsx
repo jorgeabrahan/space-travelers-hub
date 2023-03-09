@@ -19,7 +19,7 @@ function Profile() {
         {reservedMissionsList.length > 0 && (
         <>
           <h2 className="reserved__title">My Missions</h2>
-          <div className="reserved__list">
+          <div className="reserved__list" data-testid="missions-container">
             {reservedMissionsList}
           </div>
         </>
@@ -32,7 +32,7 @@ function Profile() {
         {reservedRocketsList.length > 0 && (
         <>
           <h2 className="reserved__title">My Rockets</h2>
-          <div className="reserved__list">
+          <div className="reserved__list" data-testid="rockets-container">
             {reservedRocketsList}
           </div>
         </>
