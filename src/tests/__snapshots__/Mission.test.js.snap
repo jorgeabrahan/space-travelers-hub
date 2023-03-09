@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tests for <Mission /> component Should match the snapshot 1`] = `
+<table>
+  <tbody>
+    <tr
+      className="tableOdd"
+    >
+      <td
+        className="tableMissionName"
+      >
+        Mission 1
+      </td>
+      <td
+        className="tableMissionDescription"
+      >
+        Mission description
+      </td>
+      <td
+        className="tableStatus"
+      >
+        <div
+          className="notAMember"
+        >
+          not a member
+        </div>
+      </td>
+      <td
+        className="tableJoin"
+      >
+        <button
+          className="outMission"
+          onClick={[Function]}
+          type="button"
+        >
+          Join Mission
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+`;

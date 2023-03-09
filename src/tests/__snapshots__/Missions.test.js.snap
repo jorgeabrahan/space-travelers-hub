@@ -1,0 +1,108 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tests for <Missions /> component Should match the snapshot 1`] = `
+<section
+  className="center"
+>
+  <table
+    className="table"
+  >
+    <thead>
+      <tr>
+        <th
+          className="tableHeader"
+        >
+          Mission
+        </th>
+        <th
+          className="tableHeader"
+        >
+          Description
+        </th>
+        <th
+          className="tableHeader"
+        >
+          Status
+        </th>
+        <th
+          className="tableHeader"
+        >
+           
+        </th>
+      </tr>
+    </thead>
+    <tbody
+      data-testid="missions-container"
+    >
+      <tr
+        className="tableOdd"
+      >
+        <td
+          className="tableMissionName"
+        >
+          Mission 1
+        </td>
+        <td
+          className="tableMissionDescription"
+        >
+          Mission description
+        </td>
+        <td
+          className="tableStatus"
+        >
+          <div
+            className="notAMember"
+          >
+            not a member
+          </div>
+        </td>
+        <td
+          className="tableJoin"
+        >
+          <button
+            className="outMission"
+            onClick={[Function]}
+            type="button"
+          >
+            Join Mission
+          </button>
+        </td>
+      </tr>
+      <tr
+        className="tableEven"
+      >
+        <td
+          className="tableMissionName"
+        >
+          Mission 1
+        </td>
+        <td
+          className="tableMissionDescription"
+        >
+          Mission description
+        </td>
+        <td
+          className="tableStatus"
+        >
+          <div
+            className="member"
+          >
+            active member
+          </div>
+        </td>
+        <td
+          className="tableJoin"
+        >
+          <button
+            className="onMission"
+            onClick={[Function]}
+            type="button"
+          >
+            Leave Mission
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+`;
