@@ -28,7 +28,7 @@ function Rockets() {
   ));
 
   return (
-    <section className="center rockets">
+    <section className="center rockets" data-testid="rockets-container">
       {status === 'succeeded' ? rocketsList : <p>Loading...</p>}
     </section>
   );
